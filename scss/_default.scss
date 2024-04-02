@@ -1,0 +1,74 @@
+.overflow-x {
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.overflow-y {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.hidden-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  user-select: none;
+}
+
+ul,
+li {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration-line: none;
+}
+
+button,
+button:hover,
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+input,
+input:hover,
+input:focus {
+  outline: none;
+
+  &::placeholder {
+    color: #99b0bc;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+textarea {
+  resize: none;
+
+  &::placeholder {
+    color: #99b0bc;
+  }
+}
+
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

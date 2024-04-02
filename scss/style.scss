@@ -1,0 +1,104 @@
+@import '_default.scss';
+
+#menu {
+  button {
+    height: 100%;
+    aspect-ratio: 8/4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      margin-bottom: 0;
+      font-weight: bold;
+    }
+  }
+
+  nav {
+    button {
+      aspect-ratio: 9/4;
+      border-right: 1px solid rgb(243 244 246);
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+}
+
+// style chọn bàn
+
+.ban-item {
+  width: max-content;
+  height: max-content;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: green;
+    border-radius: 5rem;
+    z-index: 0;
+  }
+
+  &::after {
+    content: '';
+    width: 1.5rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: green;
+    border-radius: 5rem;
+    z-index: 0;
+  }
+
+  .wrap {
+    width: 6rem;
+    aspect-ratio: 1/1;
+    background-color: #fff;
+    border-width: 3px;
+    border-style: solid;
+    border-color: green;
+    outline: 2px solid #fff;
+    border-radius: 0.5rem;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: green;
+    font-size: 1.5rem;
+  }
+
+  &.co-khach::before,
+  &.co-khach::after {
+    background-color: red;
+  }
+
+  &.co-khach .wrap {
+    color: red;
+    border-color: red;
+  }
+
+  &.chon-ban::before,
+  &.chon-ban::after {
+    background-color: orange;
+  }
+
+  &.chon-ban .wrap {
+    color: orange;
+    border-color: orange;
+  }
+}
