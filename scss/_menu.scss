@@ -1,0 +1,26 @@
+#menu {
+  button {
+    height: 100%;
+    aspect-ratio: 8/4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      margin-bottom: 0;
+      font-weight: bold;
+    }
+  }
+
+  nav {
+    button {
+      aspect-ratio: 9/4;
+      border-right: 1px solid rgb(243 244 246);
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+}
